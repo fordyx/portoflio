@@ -70,7 +70,7 @@ export default function Home() {
     <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <div className="mx-auto flex max-w-6xl flex-col gap-20 px-6 py-10 sm:px-10 lg:px-12">
         <motion.header
-          className="sticky top-4 z-[1] rounded-2xl border-2 border-[var(--border)] bg-gradient-to-r from-[var(--card)]/95 via-[oklch(0.99_0.01_60/0.95)] to-[var(--card)]/95 backdrop-blur-md shadow-xl"
+          className="fixed top-4 left-0 right-0 z-[50] mx-auto max-w-6xl rounded-2xl border-2 border-[var(--border)] bg-gradient-to-r from-[var(--card)]/95 via-[oklch(0.99_0.01_60/0.95)] to-[var(--card)]/95 backdrop-blur-md shadow-xl"
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -80,6 +80,7 @@ export default function Home() {
               <SparkIcon />
               <span>Clifford Degamo</span>
             </div>
+
             <div className="flex flex-wrap items-center gap-3">
               {navLinks.map((item) => (
                 <Link
@@ -154,7 +155,11 @@ export default function Home() {
                   <button
                     type="button"
                     onClick={() =>
-                      window.open("/resume.pdf", "_blank", "noopener,noreferrer")
+                      window.open(
+                        "/resume.pdf",
+                        "_blank",
+                        "noopener,noreferrer"
+                      )
                     }
                     className="inline-flex items-center gap-2 rounded-full border-2 border-[var(--border)] bg-[oklch(0.99_0.01_60)] px-6 py-3 text-[var(--foreground)] transition-all hover:border-[oklch(0.60_0.20_55)] hover:bg-gradient-to-r hover:from-[oklch(0.99_0.02_60)] hover:to-[oklch(0.98_0.03_55)] hover:scale-105 font-semibold"
                   >
@@ -165,18 +170,28 @@ export default function Home() {
               </div>
               <div className="grid gap-3 rounded-2xl border-2 border-dashed border-[var(--primary)]/40 bg-gradient-to-br from-[oklch(0.60_0.20_55/0.08)] via-[oklch(0.70_0.18_45/0.05)] to-transparent p-6 text-sm text-[var(--muted-foreground)] relative z-10 shadow-md lg:order-1">
                 <div className="space-y-1">
-                  <p className="text-xs uppercase tracking-wide font-semibold">Current focus</p>
+                  <p className="text-xs uppercase tracking-wide font-semibold">
+                    Current focus
+                  </p>
                   <p className="text-base text-[var(--foreground)] font-medium">
                     Minimal portfolio systems & FCFS visualizations
                   </p>
                 </div>
                 <div className="space-y-1">
-                  <p className="text-xs uppercase tracking-wide font-semibold">Stack</p>
-                  <p className="font-medium">React · Next.js · Tailwind · Framer Motion · Figma</p>
+                  <p className="text-xs uppercase tracking-wide font-semibold">
+                    Stack
+                  </p>
+                  <p className="font-medium">
+                    React · Next.js · Tailwind · Framer Motion · Figma
+                  </p>
                 </div>
                 <div className="space-y-1">
-                  <p className="text-xs uppercase tracking-wide font-semibold">Availability</p>
-                  <p className="font-medium">Open for collaboration · First come, first served</p>
+                  <p className="text-xs uppercase tracking-wide font-semibold">
+                    Availability
+                  </p>
+                  <p className="font-medium">
+                    Open for collaboration · First come, first served
+                  </p>
                 </div>
               </div>
             </section>
@@ -198,18 +213,21 @@ export default function Home() {
               </div>
               <div className="space-y-4 text-sm text-[var(--muted-foreground)] relative z-10 md:col-span-3 lg:col-span-2">
                 <p className="font-medium text-base">
-                  Modern UI, thoughtful design, and scalable systems guide my work.
-                  I focus on clean code, reusable components, and intuitive user experiences.
+                  Modern UI, thoughtful design, and scalable systems guide my
+                  work. I focus on clean code, reusable components, and
+                  intuitive user experiences.
                 </p>
                 <div className="grid gap-4 md:grid-cols-2">
                   <p className="font-medium">
-                    As a 3rd year BSIT student, I explore how modern design and system
-                    thinking can create better user experiences. My tools of choice are
-                    React, Next.js, Tailwind CSS, and Figma for building innovative solutions.
+                    As a 3rd year BSIT student, I explore how modern design and
+                    system thinking can create better user experiences. My tools
+                    of choice are React, Next.js, Tailwind CSS, and Figma for
+                    building innovative solutions.
                   </p>
                   <p className="font-medium">
                     I'm currently working on CPU scheduling visualizers and web
-                    applications that prioritize performance, accessibility, and beautiful design.
+                    applications that prioritize performance, accessibility, and
+                    beautiful design.
                   </p>
                 </div>
               </div>
@@ -239,7 +257,9 @@ export default function Home() {
                     <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[oklch(0.60_0.20_55)] via-[oklch(0.70_0.18_45)] to-[oklch(0.75_0.20_70)] text-lg font-semibold text-[var(--primary-foreground)] shadow-md">
                       {skill.icon}
                     </span>
-                    <span className="font-semibold text-center">{skill.label}</span>
+                    <span className="font-semibold text-center">
+                      {skill.label}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -264,9 +284,10 @@ export default function Home() {
                 <div className="space-y-4 order-2 lg:order-1">
                   <div className="space-y-3">
                     <p className="text-sm text-[var(--muted-foreground)] font-medium">
-                      A scheduling visualizer that highlights FCFS execution with a
-                      responsive Gantt chart. Built in Next.js with React state,
-                      emphasizing readable timelines and zero-noise interactions.
+                      A scheduling visualizer that highlights FCFS execution
+                      with a responsive Gantt chart. Built in Next.js with React
+                      state, emphasizing readable timelines and zero-noise
+                      interactions.
                     </p>
                     <p className="text-sm text-[var(--muted-foreground)] font-medium">
                       Each process bar scales according to burst time, giving a
@@ -362,8 +383,8 @@ export default function Home() {
         </main>
 
         <footer className="pb-8 text-center text-xs text-[var(--muted-foreground)]">
-          © {new Date().getFullYear()} Clifford Degamo · Minimal systems,
-          clear stories.
+          © {new Date().getFullYear()} Clifford Degamo · Minimal systems, clear
+          stories.
         </footer>
       </div>
     </div>
