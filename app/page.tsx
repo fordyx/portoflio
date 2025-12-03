@@ -363,7 +363,7 @@ export default function Home() {
                       <item.icon />
                       {item.label}
                     </div>
-                    <p className="text-base font-semibold text-[var(--foreground)] group-hover:bg-gradient-to-r group-hover:from-[oklch(0.60_0.20_55)] group-hover:to-[oklch(0.70_0.18_45)] group-hover:bg-clip-text group-hover:text-transparent">
+                    <p className="text-[14px] font-semibold text-[var(--foreground)] group-hover:bg-gradient-to-r group-hover:from-[oklch(0.60_0.20_55)] group-hover:to-[oklch(0.70_0.18_45)] group-hover:bg-clip-text group-hover:text-transparent">
                       {item.value}
                     </p>
                   </a>
